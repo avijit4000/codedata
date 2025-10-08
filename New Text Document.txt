@@ -1,4 +1,80 @@
 {
     "asking_question": "What is your Mobile number?",
     "user_answer": "My last name is Avijit Biswas. My date of birth 19 apr 1993"
+
 }
+
+
+
+from flask import Flask, jsonify, request
+import requests
+
+app = Flask(__name__)
+
+@app.route('/ask_question', methods=['POST'])
+def ask_question():
+    data = request.get_json()
+    user_input = data.get('field_name', '').strip()
+    session_id = data.get('session_id', 'user1')
+    history = get_session_history(session_id)
+
+    for msg in history.messages:
+        if user_input.lower() in msg.content.lower():
+            return jsonify({"extracted_answer": msg.content})
+
+    question_template = template_builder.question_ask(user_input)
+    prompt = PromptTemplate(input_variables=["user_input"], template=question_template)
+    chain = LLMChain(llm=llm, prompt=prompt, verbose=False)
+    result = chain.run(user_input=user_input).strip()
+    return jsonify({"question": result})
+
+
+@app.route('/extract_answer', methods=['POST'])
+def extract_answer():
+    data = request.get_json()
+    field_name = data.get('field_name', '')
+    user_answer = data.get('user_answer', '')
+    session_id = data.get('session_id', 'user1')
+
+    # Step 1: Call /ask_question API internally
+    ask_question_url = request.host_url.rstrip('/') + '/ask_question'
+    ask_payload = {"field_name": field_name, "session_id": session_id}
+    ask_response = requests.post(ask_question_url, json=ask_payload)
+
+    if ask_response.status_code != 200:
+        return jsonify({"error": "Failed to get question"}), 500
+
+    question_data = ask_response.json()
+    asking_question = question_data.get('question', '')
+
+    # Step 2: Process answer extraction
+    history = get_session_history(session_id)
+    answer_template = template_builder.question_answer(asking_question, user_answer)
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", answer_template),
+        MessagesPlaceholder(variable_name="history"),
+        ("human", "{input}")
+    ])
+    chain = prompt | llm
+    with_memory = RunnableWithMessageHistory(
+        chain,
+        get_session_history,
+        input_messages_key="input",
+        history_messages_key="history"
+    )
+    config = {"configurable": {"session_id": session_id}}
+
+    # Store user answer in memory
+    if user_answer:
+        with_memory.invoke({"input": user_answer}, config=config)
+
+    # Extract final answer
+    response = with_memory.invoke({"input": asking_question}, config=config)
+    return jsonify({
+        "asking_question": asking_question,
+        "extracted_answer": response.content
+    })
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
