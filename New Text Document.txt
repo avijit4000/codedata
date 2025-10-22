@@ -78,3 +78,49 @@ def extract_answer():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+questions1 ={
+    "first_name": "What is your first name?",
+    "middle_name": "What is your middle name or initial?",
+    "last_name": "What is your last name?",
+    "date_of_birth": "What is your date of birth? (MM/DD/YYYY)",
+    "sex": "What is your sex? (Male/Female/Other)",
+    "medicare_number": "What is your Medicare number?",
+    "hospital_part_a_effective_date": "What is your Hospital (Part A) effective date? (MM/DD/YYYY)",
+    "medical_part_b_effective_date": "What is your Medical (Part B) effective date? (MM/DD/YYYY)",
+    "enrolled_in_medicaid": "Are you enrolled in your state's Medicaid program? (Yes/No)",
+    "medicaid_number": "What is your Medicaid number?",
+    "street_address": "What is your street address?",
+    "apartment_suite": "Please provide your apartment or suite number (if applicable).",
+    "city": "Which city do you live in?",
+    "mailing_same_as_primary": "Is your mailing address the same as your primary address? (Yes/No)",
+    "phone_type": "What type of phone do you use? (Mobile/Home/Work)",
+    "phone_number": "What is your phone number?",
+    "email_address": "What is your email address?",
+    "preferred_language": "What is your preferred language?",
+    "preferred_format": "What is your preferred communication format? (Email/Mail/Other)",
+    "other_prescription_insurance": "Do you have other insurance that will cover your prescription drugs in addition to AARP Medicare Advantage Patriot No Rx CA-MA01 (HMO-POS)? (Yes/No)",
+    "insurance_name": "What is the name of your other insurance provider?",
+    "insurance_group_id": "What is your insurance group ID number?",
+    "insurance_member_id": "What is your insurance member ID number?",
+    "rx_bin": "What is your Rx BIN?",
+    "enrollment_type_iep": "Are you new to Medicare and enrolling during your Initial Enrollment Period (IEP)? (Yes/No)",
+    "enrollment_type_sep": "Are you changing your current coverage during a Special Enrollment Period (SEP)? (Yes/No)",
+    "losing_employer_coverage": "Are you losing coverage you had from an employer? (Yes/No)",
+    "coverage_loss_month": "In which month are you losing your employer coverage?",
+    "coverage_loss_day": "On which day are you losing your employer coverage?",
+    "coverage_loss_year": "In which year are you losing your employer coverage?",
+    "proposed_effective_date": "What is your proposed effective date? (MM/DD/YYYY)",
+    "find_provider": "Would you like to search for your healthcare provider? (Yes/No)",
+    "pcp_name": "Enter your Primary Care Provider's (PCP) name.",
+    "pcp_location": "Please select your PCP's location.",
+    "assign_pcp": "Would you like to assign this Primary Care Provider? (Yes/No)",
+    "dollar_amount": "Please confirm the displayed dollar amount.",
+    "enrollee_confirmation": "Are you the enrollee listed on this enrollment form? (Yes/No)",
+    "authorized_representative": "Are you the authorized representative of the enrollee listed on this enrollment form? (Yes/No)",
+    "agreement": "Do you agree to the terms and conditions? (Agree/Disagree)",
+    "submit_application": "Would you like to submit your application? (Yes/No)"
+}
+
