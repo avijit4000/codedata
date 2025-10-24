@@ -124,3 +124,13 @@ questions1 ={
     "submit_application": "Would you like to submit your application? (Yes/No)"
 }
 
+
+
+no, i want this waywrite a message about task 
+1. chatbot application converting convectional
+2. current time question creation with the filed name 
+3. asking question user-friendly way
+4. curation of user input real time with the application
+
+write it with in 4 sentencess. make this formaly
+
