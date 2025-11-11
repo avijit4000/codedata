@@ -155,3 +155,27 @@ http://mr-portals-monitoring.optum.com/acquisition/overview/ampKeyMetricsView
 
 
 [{'source': 'current_year_ytd', 'priority_1_2_count': 4, 'priority_3_4_5_count': 92, 'problem_count': 5, 'total_adtm': 0}, {'source': 'previous_year_ytd', 'priority_1_2_count': 9, 'priority_3_4_5_count': 100, 'problem_count': 11}, {'source': 'previous_year', 'priority_1_2_count': 10, 'priority_3_4_5_count': 115, 'problem_count': 12}, {'source': 'year_before_previous_year', 'priority_1_2_count': 12, 'priority_3_4_5_count': 345, 'problem_count': 87}, {'source': 'January 2024', 'priority_1_2_count': 2, 'priority_3_4_5_count': 12, 'problem_count': 5}, {'source': 'February 2024', 'priority_1_2_count': 0, 'priority_3_4_5_count': 8, 'problem_count': 0}, {'source': 'March 2024', 'priority_1_2_count': 0, 'priority_3_4_5_count': 7, 'problem_count': 0}, {'source': 'April 2024', 'priority_1_2_count': 1, 'priority_3_4_5_count': 8, 'problem_count': 1}, {'source': 'May 2024', 'priority_1_2_count': 0, 'priority_3_4_5_count': 5, 'problem_count': 1}, {'source': 'June 2024', 'priority_1_2_count': 1, 'priority_3_4_5_count': 8, 'problem_count': 0}, {'source': 'July 2024', 'priority_1_2_count': 1, 'priority_3_4_5_count': 16, 'problem_count': 1}, {'source': 'August 2024', 'priority_1_2_count': 3, 'priority_3_4_5_count': 13, 'problem_count': 1}, {'source': 'September 2024', 'priority_1_2_count': 0, 'priority_3_4_5_count': 8, 'problem_count': 0}, {'source': 'October 2024', 'priority_1_2_count': 0, 'priority_3_4_5_count': 21, 'problem_count': 0}, {'source': 'November 2024', 'priority_1_2_count': 3, 'priority_3_4_5_count': 15, 'problem_count': 3}, {'source': 'December 2024', 'priority_1_2_count': 0, 'priority_3_4_5_count': 12, 'problem_count': 0}, {'source': 'January 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 10, 'problem_count': 0}, {'source': 'February 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 13, 'problem_count': 0}, {'source': 'March 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 6, 'problem_count': 0}, {'source': 'April 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 6, 'problem_count': 0}, {'source': 'May 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 1, 'problem_count': 0}, {'source': 'June 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 3, 'problem_count': 0}, {'source': 'July 2025', 'priority_1_2_count': 0, 'priority_3_4_5_count': 4, 'problem_count': 0}, {'source': 'August 2025', 'priority_1_2_count': 1, 'priority_3_4_5_count': 10, 'problem_count': 1}, {'source': 'September 2025', 'priority_1_2_count': 1, 'priority_3_4_5_count': 11, 'problem_count': 1}, {'source': 'October 2025', 'priority_1_2_count': 2, 'priority_3_4_5_count': 22, 'problem_count': 3}]
+
+
+
+
+What is the total problem count for the current year YTD?”
+
+📊 “Show all data for ‘previous_year_ytd’.”
+
+🔢 “Which month in 2024 had the highest priority_3_4_5_count?”
+
+📆 “List all months where problem_count > 2.”
+
+📈 “Compare priority_1_2_count between current_year_ytd and previous_year_ytd.”
+
+📉 “What is the trend of priority_3_4_5_count from January 2024 to October 2025?”
+
+⚙️ “Calculate the total number of problems reported in 2024.”
+
+📋 “Give me all records where total_adtm is present.”
+
+🔍 “Find months in 2025 where priority_1_2_count > 0.”
+
+📑 “Summarize total counts for each year (priority_1_2, priority_3_4_5, and problem_count).”
+
