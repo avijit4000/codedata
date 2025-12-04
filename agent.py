@@ -1,0 +1,60 @@
+import asyncio
+from langgraph.prebuilt import create_react_agent
+from src.tools.utils.logging import logger
+from src.LLM.llm_model.llm_model import llmtoolmodel
+from src.LLM.mcp_server.multi_server import multi_server
+
+
+class MCPToolCallSystem:
+
+    async def setup(self):
+        logger.info("Loading model and tools...")
+
+        # Inject MCP client into llm model
+        llmtoolmodel.client = multi_server.client
+
+        # Get model + tools
+        self.model = llmtoolmodel.model
+        self.tools = await llmtoolmodel.setup()
+
+        logger.info("Creating ReAct agent...")
+        self.agent = create_react_agent(self.model, self.tools)
+
+    async def ask(self, prompt: str):
+        logger.info(f"User Prompt: {prompt}")
+
+        response = await self.agent.ainvoke(
+            {"messages": [{"role": "user", "content": prompt}]}
+        )
+
+        final_answer = response["messages"][-1].content
+        logger.info(f"Response: {final_answer}")
+        return final_answer
+
+    async def run_tests(self):
+        logger.info("Running test queries...")
+
+        math_q = "what's (3 + 5) x 12?"
+        weather_q = "What is the weather in Los Angeles?"
+        db_q = "What is the average 90th percentile latency across all dates?"
+        # db_q = "which date the highest 90th percentile latency last week?"
+        # db_q = "what is the avaraget js error rate last week?"
+
+        print("\nMath Response:")
+        # print(await self.ask(math_q))
+
+        print("\nWeather Response:")
+        # print(await self.ask(weather_q))
+
+        print("\nDatabase Response:")
+        print(await self.ask(db_q))
+
+
+async def main():
+    system = MCPToolCallSystem()
+    await system.setup()
+    await system.run_tests()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
