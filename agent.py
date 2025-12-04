@@ -49,23 +49,47 @@ class MCPToolCallSystem:
     #     print("\nDatabase Response:")
     #     print(await self.ask(db_q))
 
+    # async def run_tests(self):
+    #     logger.info("MCP Chatbot Ready. Ask your question...")
+    #
+    #     # Take ONE question from user
+    #     user_question = input("\nEnter your question: ").strip()
+    #
+    #     if not user_question:
+    #         print("No question entered. Exiting...")
+    #         return
+    #
+    #     # Get response
+    #     response = await self.ask(user_question)
+    #
+    #     print("\nFinal Response:")
+    #     print(response)
+    #
+    #     logger.info("Session completed. Closing program...")
+
     async def run_tests(self):
-        logger.info("MCP Chatbot Ready. Ask your question...")
+        logger.info("MCP Chatbot Ready. Type your question.")
+        logger.info("Type 'quit' to exit.\n")
 
-        # Take ONE question from user
-        user_question = input("\nEnter your question: ").strip()
+        while True:
+            user_question = input("You: ").strip()
 
-        if not user_question:
-            print("No question entered. Exiting...")
-            return
+            if not user_question:
+                print("⚠️ Please enter a question.\n")
+                continue
 
-        # Get response
-        response = await self.ask(user_question)
+            if user_question.lower() in {"quit", "exit", "bye"}:
+                print("\n✅ Session ended. Goodbye!")
+                logger.info("User exited the chatbot.")
+                break
 
-        print("\nFinal Response:")
-        print(response)
+            try:
+                response = await self.ask(user_question)
+                print("\nAgent:", response, "\n")
+            except Exception as e:
+                logger.error(f"Error while processing question: {e}")
+                print("\n❌ Error processing your question.\n")
 
-        logger.info("Session completed. Closing program...")
 
 
 
