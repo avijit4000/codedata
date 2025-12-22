@@ -640,3 +640,4 @@ UnboundLocalError: cannot access local variable 'tools' where it is not associat
       |   File "C:\Newfolder\MCP-module\venv\Lib\site-packages\mcp\shared\session.py", line 288, in send_request
       |     raise McpError(response_or_error.error)
       | mcp.shared.exceptions.McpError: Connection closed
+https://github.com/uhc-tech-medicare-retiree-common/gpd-dm-cohort-recommendation-api/blob/develop/function_app.py
