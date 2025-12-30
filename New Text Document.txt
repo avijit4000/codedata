@@ -649,3 +649,5 @@ cd /d D:\Pyn\Test_work\LLMs\UHG\mcpone\mcpfile
 .venv\Scripts\activate
 uv run --active mcp dev server/weather.py
 
+npx @modelcontextprotocol/inspector
+ 
