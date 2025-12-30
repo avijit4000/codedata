@@ -641,3 +641,11 @@ UnboundLocalError: cannot access local variable 'tools' where it is not associat
       |     raise McpError(response_or_error.error)
       | mcp.shared.exceptions.McpError: Connection closed
 https://github.com/uhc-tech-medicare-retiree-common/gpd-dm-cohort-recommendation-api/blob/develop/function_app.py
+
+
+
+mkdir C:\Users\aviji\AppData\Roaming\npm
+cd /d D:\Pyn\Test_work\LLMs\UHG\mcpone\mcpfile
+.venv\Scripts\activate
+uv run --active mcp dev server/weather.py
+
