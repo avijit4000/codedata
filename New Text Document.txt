@@ -665,3 +665,319 @@ npm error network If you are behind a proxy, please make sure that the
 npm error network 'proxy' config is set properly.  See: 'npm help config'
 npm error A complete log of this run can be found in: C:\Users\abiswa51\AppData\Local\npm-cache\_logs\2025-12-30T11_57_08_392Z-debug-0.log
 
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+The Key 'PRISMA-SECRET-ACCESS-KEY' was found! Setting 'PRISMA_ACCESS_KEY' as both an environment variable and output!
+Run uhc-tech-medicare-retiree-common/gpd-actions-lib/actions/optum/prisma-cloud-scan@main
+Failure Threshold: 2
+/usr/bin/chmod a+x /home/runner/_work/_temp/d06dfaec-187d-4e67-9b44-de15979e2472
+/home/runner/_work/_tool/twistcli/34.03.138/x64/twistcli images scan --address https://us-east1.cloud.twistlock.com/us-2-158257717 --user *** --password *** --output-file prismacloud.json --details --docker-address unix:///var/run/docker.sock --docker-tlscacert /certs/client/ca.pem --docker-tlscert /certs/client/cert.pem --docker-tlskey /certs/client/key.pem --publish=true centraluhg.jfrog.io/gpd-docker-vir/gpd-ops-mcp-api:hcc_connect_example-60
+
+Scan results for: image centraluhg.jfrog.io/gpd-docker-vir/gpd-ops-mcp-api:hcc_connect_example-60 sha256:27e685637e76041c78d8e0debb69306b2fd113cd3dc710fbc73f6777494de90c
+Vulnerabilities
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+|         CVE         | SEVERITY | CVSS |    PACKAGE     |  VERSION   |       STATUS        |  PUBLISHED  | DISCOVERED |                    DESCRIPTION                     |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| GHSA-58pv-8j8x-9vj2 | high     | 8.60 | jaraco.context | 5.3.0      | fixed in 6.1.0      | 1 days      | < 1 hour   | ### Summary There is a Zip Slip path               |
+|                     |          |      |                |            | 1 days ago          |             |            | traversal vulnerability in the jaraco.context      |
+|                     |          |      |                |            |                     |             |            | package affecting setuptools as well, in           |
+|                     |          |      |                |            |                     |             |            | `jaraco.context.tarball()`...                      |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-7546       | high     | 7.80 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 6 months  | < 1 hour   | A vulnerability, which was classified as           |
+|                     |          |      |                |            | 63 days ago         |             |            | problematic, has been found in GNU Binutils        |
+|                     |          |      |                |            |                     |             |            | 2.45. Affected by this issue is the function       |
+|                     |          |      |                |            |                     |             |            | bfd_elf_set_group_co...                            |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-7545       | high     | 7.80 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 6 months  | < 1 hour   | A vulnerability classified as problematic was      |
+|                     |          |      |                |            | 63 days ago         |             |            | found in GNU Binutils 2.45. Affected by this       |
+|                     |          |      |                |            |                     |             |            | vulnerability is the function copy_section of the  |
+|                     |          |      |                |            |                     |             |            | file binu...                                       |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11083      | high     | 7.80 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability has been found in GNU Binutils     |
+|                     |          |      |                |            | 63 days ago         |             |            | 2.45. The affected element is the function         |
+|                     |          |      |                |            |                     |             |            | elf_swap_shdr in the library bfd/elfcode.h of the  |
+|                     |          |      |                |            |                     |             |            | component ...                                      |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11082      | high     | 7.80 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A flaw has been found in GNU Binutils 2.45.        |
+|                     |          |      |                |            | 63 days ago         |             |            | Impacted is the function _bfd_elf_parse_eh_frame   |
+|                     |          |      |                |            |                     |             |            | of the file bfd/elf-eh-frame.c of the component    |
+|                     |          |      |                |            |                     |             |            | Linker. E...                                       |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-9230       | high     | 7.50 | openssl        | 3.5.2-r1   | fixed in 3.5.4-r0   | > 3 months  | < 1 hour   | Issue summary: An application trying to decrypt    |
+|                     |          |      |                |            | > 3 months ago      |             |            | CMS messages encrypted using password based        |
+|                     |          |      |                |            |                     |             |            | encryption can trigger an out-of-bounds read and   |
+|                     |          |      |                |            |                     |             |            | write.  I...                                       |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-9231       | medium   | 6.50 | openssl        | 3.5.2-r1   | fixed in 3.5.4-r0   | > 3 months  | < 1 hour   | Issue summary: A timing side-channel which could   |
+|                     |          |      |                |            | > 3 months ago      |             |            | potentially allow remote recovery of the private   |
+|                     |          |      |                |            |                     |             |            | key exists in the SM2 algorithm implementation on  |
+|                     |          |      |                |            |                     |             |            | 64...                                              |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-60876      | medium   | 6.50 | busybox        | 1.37.0     |                     | 65 days     | < 1 hour   | BusyBox wget thru 1.3.7 accepted raw CR (0x0D)/LF  |
+|                     |          |      |                |            |                     |             |            | (0x0A) and other C0 control bytes in the HTTP      |
+|                     |          |      |                |            |                     |             |            | request-target (path/query), allowing the request  |
+|                     |          |      |                |            |                     |             |            | line...                                            |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-50182      | medium   | 6.10 | py3-pip        | 25.2-r0    | fixed in 25.3-r1    | > 7 months  | < 1 hour   | urllib3 is a user-friendly HTTP client library     |
+|                     |          |      |                |            | 8 days ago          |             |            | for Python. Starting in version 2.2.0 and prior    |
+|                     |          |      |                |            |                     |             |            | to 2.5.0, urllib3 does not control redirects in    |
+|                     |          |      |                |            |                     |             |            | browser...                                         |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-9232       | medium   | 5.90 | openssl        | 3.5.2-r1   | fixed in 3.5.4-r0   | > 3 months  | < 1 hour   | Issue summary: An application using the OpenSSL    |
+|                     |          |      |                |            | > 3 months ago      |             |            | HTTP client API functions may trigger an           |
+|                     |          |      |                |            |                     |             |            | out-of-bounds read if the \'no_proxy\' environment |
+|                     |          |      |                |            |                     |             |            | variable i...                                      |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11840      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | 90 days     | < 1 hour   | A weakness has been identified in GNU Binutils     |
+|                     |          |      |                |            | 63 days ago         |             |            | 2.45. The affected element is the function vfinfo  |
+|                     |          |      |                |            |                     |             |            | of the file ldmisc.c. Executing manipulation can   |
+|                     |          |      |                |            |                     |             |            | lead...                                            |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11839      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | 90 days     | < 1 hour   | A security flaw has been discovered in GNU         |
+|                     |          |      |                |            | 63 days ago         |             |            | Binutils 2.45. Impacted is the function            |
+|                     |          |      |                |            |                     |             |            | tg_tag_type of the file prdbg.c. Performing        |
+|                     |          |      |                |            |                     |             |            | manipulation results in...                         |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11495      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability was determined in GNU Binutils     |
+|                     |          |      |                |            | 63 days ago         |             |            | 2.45. The affected element is the function         |
+|                     |          |      |                |            |                     |             |            | elf_x86_64_relocate_section of the file            |
+|                     |          |      |                |            |                     |             |            | elf64-x86-64.c of th...                            |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11494      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability was found in GNU                   |
+|                     |          |      |                |            | 63 days ago         |             |            | Binutils 2.45. Impacted is the function            |
+|                     |          |      |                |            |                     |             |            | _bfd_x86_elf_late_size_sections of the file        |
+|                     |          |      |                |            |                     |             |            | bfd/elfxx-x86.c of the component ...               |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11414      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability was determined in GNU Binutils     |
+|                     |          |      |                |            | 63 days ago         |             |            | 2.45. Affected by this vulnerability is the        |
+|                     |          |      |                |            |                     |             |            | function get_link_hash_entry of the file           |
+|                     |          |      |                |            |                     |             |            | bfd/elflink.c of t...                              |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11413      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability was found in GNU                   |
+|                     |          |      |                |            | 63 days ago         |             |            | Binutils 2.45. Affected is the function            |
+|                     |          |      |                |            |                     |             |            | elf_link_add_object_symbols of the file            |
+|                     |          |      |                |            |                     |             |            | bfd/elflink.c of the component Linker...           |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11412      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability has been found in GNU              |
+|                     |          |      |                |            | 63 days ago         |             |            | Binutils 2.45. This impacts the function           |
+|                     |          |      |                |            |                     |             |            | bfd_elf_gc_record_vtentry of the file              |
+|                     |          |      |                |            |                     |             |            | bfd/elflink.c of the component Li...               |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-11081      | medium   | 5.50 | binutils       | 2.45-r0    | fixed in 2.45.1-r1  | > 3 months  | < 1 hour   | A vulnerability was detected in GNU Binutils 2.45. |
+|                     |          |      |                |            | 63 days ago         |             |            | This issue affects the function dump_dwarf_section |
+|                     |          |      |                |            |                     |             |            | of the file binutils/objdump.c. Performing         |
+|                     |          |      |                |            |                     |             |            | manip...                                           |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-46394      | low      | 3.30 | busybox        | 1.37.0-r48 | fixed in 1.37.0-r50 | > 8 months  | < 1 hour   | In tar in BusyBox through 1.37.0, a TAR archive    |
+|                     |          |      |                |            | > 4 months ago      |             |            | can have filenames hidden from a listing through   |
+|                     |          |      |                |            |                     |             |            | the use of terminal escape sequences.              |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-8869       | low      | 0.00 | py3-pip        | 25.2-r0    | fixed in 25.2-r2    | > 3 months  | < 1 hour   | When extracting a tar archive pip may not check    |
+|                     |          |      |                |            | 69 days ago         |             |            | symbolic links point into the extraction directory |
+|                     |          |      |                |            |                     |             |            | if the tarfile module doesn\'t implement PEP 706.  |
+|                     |          |      |                |            |                     |             |            | N...                                               |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-8291       | low      | 0.00 | python-3.11    | 3.11.13-r3 | fixed in 3.11.14-r0 | > 3 months  | < 1 hour   | The \'zipfile\' module would not check the         |
+|                     |          |      |                |            | > 3 months ago      |             |            | validity of the ZIP64 End of Central Directory     |
+|                     |          |      |                |            |                     |             |            | (EOCD) Locator record offset value would not be    |
+|                     |          |      |                |            |                     |             |            | used to loca...                                    |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-8194       | low      | 0.00 | python-3.11    | 3.11.13-r3 | fixed in 3.11.13-r4 | > 5 months  | < 1 hour   | There is a defect in the CPython “tarfile” module  |
+|                     |          |      |                |            | > 4 months ago      |             |            | affecting the “TarFile” extraction and entry       |
+|                     |          |      |                |            |                     |             |            | enumeration APIs. The tar implementation would ... |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-6075       | low      | 0.00 | python-3.11    | 3.11.13-r3 | fixed in 3.11.14-r2 | 75 days     | < 1 hour   | If the value passed to os.path.expandvars() is     |
+|                     |          |      |                |            | 60 days ago         |             |            | user-controlled a  performance degradation is      |
+|                     |          |      |                |            |                     |             |            | possible when expanding environment  variables.    |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-58160      | low      | 0.00 | uv             | 0.8.12-r0  | fixed in 0.8.14-r1  | > 4 months  | < 1 hour   | tracing is a framework for instrumenting Rust      |
+|                     |          |      |                |            | > 4 months ago      |             |            | programs to collect structured, event-based        |
+|                     |          |      |                |            |                     |             |            | diagnostic information. Prior to version 0.3.20,   |
+|                     |          |      |                |            |                     |             |            | tracing-sub...                                     |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-4516       | low      | 0.00 | python-3.11    | 3.11.13-r3 | fixed in 3.11.14-r1 | > 8 months  | < 1 hour   | There is an issue in CPython when                  |
+|                     |          |      |                |            | 8 days ago          |             |            | using `bytes.decode(\"unicode_escape\",            |
+|                     |          |      |                |            |                     |             |            | error=\"ignore|replace\")`. If you are not using   |
+|                     |          |      |                |            |                     |             |            | the \"unicode_escape\" enco...                     |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2025-0938       | low      | 0.00 | python-3.11    | 3.11.13-r3 | fixed in 3.11.14-r1 | > 11 months | < 1 hour   | The Python standard library functions              |
+|                     |          |      |                |            | 8 days ago          |             |            | `urllib.parse.urlsplit` and `urlparse` accepted    |
+|                     |          |      |                |            |                     |             |            | domain names that included square brackets which   |
+|                     |          |      |                |            |                     |             |            | isn\'t valid ac...                                 |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+| CVE-2024-58251      | low      | 0.00 | busybox        | 1.37.0-r48 | fixed in 1.37.0-r49 | > 8 months  | < 1 hour   | In netstat in BusyBox through 1.37.0, local users  |
+|                     |          |      |                |            | > 4 months ago      |             |            | can launch of network application with an argv[0]  |
+|                     |          |      |                |            |                     |             |            | containing an ANSI terminal escape sequence,       |
+|                     |          |      |                |            |                     |             |            | leadi...                                           |
++---------------------+----------+------+----------------+------------+---------------------+-------------+------------+----------------------------------------------------+
+
+Vulnerabilities found for image centraluhg.jfrog.io/gpd-docker-vir/gpd-ops-mcp-api:hcc_connect_example-60: total - 27, critical - 0, high - 6, medium - 12, low - 9
+Vulnerability threshold check results: PASS
+
+Compliance Issues
++----------+------------------------------------------------------------------------+
+| SEVERITY |                              DESCRIPTION                               |
++----------+------------------------------------------------------------------------+
+| high     | (CIS_Docker_v1.5.0 - 4.1) Image should be created with a non-root user |
++----------+------------------------------------------------------------------------+
+
+Compliance found for image centraluhg.jfrog.io/gpd-docker-vir/gpd-ops-mcp-api:hcc_connect_example-60: total - 1, critical - 0, high - 1, medium - 0, low - 0
+Compliance threshold check results: PASS
+Link to the results in Console: https://app2.prismacloud.io/compute?computeState=/monitor/vulnerabilities/images/ci?search%3Dsha256%253A27e685637e76041c78d8e0debb69306b2fd113cd3dc710fbc73f6777494de90c
+Wrote scan results to prismacloud.json
+***"cves":["CVE-2021-0341","CVE-2024-0567","CVE-2024-22243","CVE-2024-22259","CVE-2024-22262","CVE-2024-6345","CVE-2024-40898","CVE-2024-45296","CVE-2024-45590","CVE-2024-38816","CVE-2024-7254","CVE-2024-45813","CVE-2024-47554","CVE-2024-47535","CVE-2024-21538","CVE-2024-38821","CVE-2025-0840","CVE-2016-1000027","PRISMA-2023-0067","CVE-2016-10164","PRISMA-2022-0168","GHSA-xpw8-rcwv-8f8p","GHSA-r68h-jhhj-9jvm","PRISMA-2023-0035","CVE-2024-4068","CVE-2024-1233","CVE-2024-32002","CVE-2024-34750","CVE-2024-22271","CVE-2024-39338","CVE-2024-57699","CVE-2025-24970","CVE-2024-38819","CVE-2025-0840","PRISMA-2022-0168","CVE-2025-32414","CVE-2025-32415","CVE-2025-48734","CVE-2024-38819","CVE-2024-38816","CVE-2025-22235","PRISMA-2023-0024","CVE-2025-6965","CVE-2025-0840","CVE-2025-55163","CVE-2025-9784","CVE-2025-41249","CVE-2025-41248","AGPL-3.0-or-later","CVE-2025-7546","CVE-2025-7545","CVE-2025-11083","CVE-2025-11082","CVE-2025-64756","CVE-2025-9230"]***
+Checking if vulnerability CVE-2021-0341 is ignored.
+Checking if vulnerability CVE-2024-0567 is ignored.
+Checking if vulnerability CVE-2024-22243 is ignored.
+Checking if vulnerability CVE-2024-22259 is ignored.
+Checking if vulnerability CVE-2024-22262 is ignored.
+Checking if vulnerability CVE-2024-6345 is ignored.
+Checking if vulnerability CVE-2024-40898 is ignored.
+Checking if vulnerability CVE-2024-45296 is ignored.
+Checking if vulnerability CVE-2024-45590 is ignored.
+Checking if vulnerability CVE-2024-38816 is ignored.
+Checking if vulnerability CVE-2024-7254 is ignored.
+Checking if vulnerability CVE-2024-45813 is ignored.
+Checking if vulnerability CVE-2024-47554 is ignored.
+Checking if vulnerability CVE-2024-47535 is ignored.
+Checking if vulnerability CVE-2024-21538 is ignored.
+Checking if vulnerability CVE-2024-38821 is ignored.
+Checking if vulnerability CVE-2025-0840 is ignored.
+Checking if vulnerability CVE-2016-1000027 is ignored.
+Checking if vulnerability PRISMA-2023-0067 is ignored.
+Checking if vulnerability CVE-2016-10164 is ignored.
+Checking if vulnerability PRISMA-2022-0168 is ignored.
+Checking if vulnerability GHSA-xpw8-rcwv-8f8p is ignored.
+Checking if vulnerability GHSA-r68h-jhhj-9jvm is ignored.
+Checking if vulnerability PRISMA-2023-0035 is ignored.
+Checking if vulnerability CVE-2024-4068 is ignored.
+Checking if vulnerability CVE-2024-1233 is ignored.
+Checking if vulnerability CVE-2024-32002 is ignored.
+Checking if vulnerability CVE-2024-34750 is ignored.
+Checking if vulnerability CVE-2024-22271 is ignored.
+Checking if vulnerability CVE-2024-39338 is ignored.
+Checking if vulnerability CVE-2024-57699 is ignored.
+Checking if vulnerability CVE-2025-24970 is ignored.
+Checking if vulnerability CVE-2024-38819 is ignored.
+Checking if vulnerability CVE-2025-0840 is ignored.
+Checking if vulnerability PRISMA-2022-0168 is ignored.
+Checking if vulnerability CVE-2025-32414 is ignored.
+Checking if vulnerability CVE-2025-32415 is ignored.
+Checking if vulnerability CVE-2025-48734 is ignored.
+Checking if vulnerability CVE-2024-38819 is ignored.
+Checking if vulnerability CVE-2024-38816 is ignored.
+Checking if vulnerability CVE-2025-22235 is ignored.
+Checking if vulnerability PRISMA-2023-0024 is ignored.
+Checking if vulnerability CVE-2025-6965 is ignored.
+Checking if vulnerability CVE-2025-0840 is ignored.
+Checking if vulnerability CVE-2025-55163 is ignored.
+Checking if vulnerability CVE-2025-9784 is ignored.
+Checking if vulnerability CVE-2025-41249 is ignored.
+Checking if vulnerability CVE-2025-41248 is ignored.
+Checking if vulnerability AGPL-3.0-or-later is ignored.
+Checking if vulnerability CVE-2025-7546 is ignored.
+CVE-2025-7546 has been ignored.
+incrementing high to 1
+Checking if vulnerability CVE-2025-7545 is ignored.
+CVE-2025-7545 has been ignored.
+incrementing high to 2
+Checking if vulnerability CVE-2025-11083 is ignored.
+CVE-2025-11083 has been ignored.
+incrementing high to 3
+Checking if vulnerability CVE-2025-11082 is ignored.
+CVE-2025-11082 has been ignored.
+incrementing high to 4
+Checking if vulnerability CVE-2025-64756 is ignored.
+Checking if vulnerability CVE-2025-9230 is ignored.
+CVE-2025-9230 has been ignored.
+incrementing high to 5
+Error: Twistlock detected high vulnerabilityDistribution issues. Check prismacloud.json for more.
+Run actions/upload-artifact@v4
+With the provided path, there will be 1 file uploaded
+Artifact name is valid!
+Root directory input is valid!
+Beginning upload of artifact content to blob storage
+Uploaded bytes 13971
+Finished uploading artifact content to blob storage!
+SHA256 digest of uploaded artifact zip is 6ea7d6e1bf832856c91fabc7ff0785c20743f6b087e1dabbb42a28d6fa77663d
+Finalizing artifact upload
+Artifact prismacloud.json.zip successfully finalized. Artifact ID 5139851453
+Artifact prismacloud.json has been successfully uploaded! Final size is 13971 bytes. Artifact ID is 5139851453
+Artifact download URL: https://github.com/uhc-tech-medicare-retiree-common/gpd-ops-mcp-api/actions/runs/21030654135/artifacts/5139851453
+Run # Filepath to the prismacloud.json file
+Run echo "JOB_STATUS=FAILURE" >> $GITHUB_OUTPUT
+Error: Process completed with exit code 1.
+
+
+autogen-core
+autogen-ext[openai]
+autogen-ext[mcp]
+aiohttp
+mcp==1.23.1
+starlette==0.50.0
+uvicorn==0.38.0
+sse-starlette==3.0.3
+autogen-agentchat==0.7.5
+a2a-sdk[all]
+autogen-ext[mem0-local]
+networkx
+langchain-mcp-adapters
+fastmcp==2.14.0
+langchain_mcp_adapters
+flask
+azure-identity
+python-dotenv
+requests
+urllib3==2.6.3
+busybox
+jaraco.context>=6.1.0
+
+# FROM centraluhg.jfrog.io/gpd-docker-vir/uhg-goldenimages/python/dev:3.11-latest-dev
+FROM edgeinternal1uhg.optum.com/gpd-docker-vir/uhg-goldenimages/python/dev:3.11-latest-dev
+# FROM mcr.microsoft.com/devcontainers/python:3.12
+# FROM centraluhg.jfrog.io/gpd-docker-vir/uhg-goldenimages/python/dev:latest-dev AS builder
+
+# FROM centraluhg.jfrog.io/gpd-docker-vir/uhg-goldenimages/python/dev:3.11-latest-dev
+#
+#edgeinternal1uhg.optum.com/gpd-docker-vir/dsa-model:master-17931811497-109
+
+USER root
+
+WORKDIR .
+COPY . /gpd-ops-mcp-api
+
+WORKDIR /gpd-ops-mcp-api
+
+# RUN apt-get update && apt-get install -y binutils && rm -rf /var/lib/apt/lists/*
+# RUN apk add --no-cache binutils || yum install -y binutils || dnf install -y binutils
+# RUN apk add --no-cache binutils openssl
+# RUN apk update && apk add --no-cache \
+#     binutils>=2.45.1-r1 \
+#     openssl>=3.5.4-r0
+RUN apk update && apk add --no-cache binutils>=2.45.1-r1 openssl>=3.5.4-r0 && apk upgrade --no-cache
+RUN python -m pip install --upgrade pip==25.3
+# RUN python -m pip install --upgrade pip
+
+# RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip uninstall aiohttp -y
+RUN pip uninstall pip -y
+
+#download from github repo https://github.com/uhc-tech-medicare-retiree-common/gpd-ai-companion-utility-framework.git
+# RUN git clone https://github.com/uhc-tech-medicare-retiree-common/gpd-ai-companion-utility-framework.git
+# RUN pip install -r gpd-ai-companion-utility-framework/requirements.txt
+# #COPY folder gpd-ai-companion-utility-framework/azure_search to ./src
+# RUN mkdir -p src/azure_search
+# RUN cp -r gpd-ai-companion-utility-framework/azure_search/* src/azure_search/
+
+# Expose port for FastAPI
+EXPOSE 8012
+
+# Run FastAPI application with Uvicorn
+ENTRYPOINT ["python","-m", "src.LLM.mcp_server.multi_server_http_example"]
+# ENTRYPOINT ["python", "-m", "uvicorn", "src.LLM.mcp_server.multi_server_http_example:app", "--host", "0.0.0.0", "--port", "8012"]
