@@ -981,3 +981,14 @@ EXPOSE 8012
 # Run FastAPI application with Uvicorn
 ENTRYPOINT ["python","-m", "src.LLM.mcp_server.multi_server_http_example"]
 # ENTRYPOINT ["python", "-m", "uvicorn", "src.LLM.mcp_server.multi_server_http_example:app", "--host", "0.0.0.0", "--port", "8012"]
+
+
+FROM edgeinternal1uhg.optum.com/gpd-docker-vir/uhg-goldenimages/python/dev:3.11-latest-dev
+FROM edgeinternal1uhg.optum.com/gpd-docker-vir/uhg-goldenimages/python/runtime:3.11-latest
+
+
+RUN addgroup -S app && adduser -S app -G app
+USER app
+
+
+
