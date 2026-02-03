@@ -187,10 +187,13 @@ def run_sql_with_date_ranges(date_ranges, source):
             MTTW = format_timedetlta_obj(row[4])
             if source == "monthly":
                 data = {"source": source,"start_date": start_date, "end_date" : end_date ,"MTTD": MTTD, "MTTE": MTTE, "MTTI": MTTI, "MTTR": MTTR, "MTTW": MTTW}
+                print(data)
             elif source == "ytd":
                 data = {"source": source,"start_date": start_date, "end_date" : end_date ,"MTTD": MTTD, "MTTE": MTTE, "MTTI": MTTI, "MTTR": MTTR, "MTTW": MTTW}
+                print(data)
             elif source == "yearly":
                 data = {"source": source,"start_date": start_date, "end_date" : end_date ,"MTTD": MTTD, "MTTE": MTTE, "MTTI": MTTI, "MTTR": MTTR, "MTTW": MTTW}
+                print(data)
             output_data = json.loads(json.dumps(data))
             merged_data.append(output_data)
 
@@ -211,9 +214,15 @@ cur.close()
 conn.close()
 
 json_data = json.dumps(merged_data)
-with open('./monitoring_dashboard/cronjob/DataMartDB.json', 'w') as f:
-    f.write(json_data)
+# Save to the servicenow_monitoring directory
+import os
+from pathlib import Path
 
+current_dir = Path(__file__).parent
+json_file_path = current_dir / 'DataMartDB.json'
+
+with open(json_file_path, 'w') as f:
+    f.write(json_data)
 
 # DEV_LOGSTASH_ENDPOINT = "http://rn000124779:8080/generic_export"
 PROD_LOGSTASH_ENDPOINT =  "http://rn000124779:8080/generic_export"
@@ -230,8 +239,9 @@ def sendToLogstash(report, endpoint):
         print("Error occured while sending data to Logstash")
 
 
-f = open('./monitoring_dashboard/cronjob/DataMartDB.json')
-data = json.loads(f.read())
+# Read from the same location we wrote to
+with open(json_file_path, 'r') as f:
+    data = json.loads(f.read())
 
 
 timestamp = datetime.utcnow()
